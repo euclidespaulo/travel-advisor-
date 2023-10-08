@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
-export default const List = () => {
+const List = () => {
     return(
-        <></>
+        <div>
+
+        </div>
     )
-}
+} 
+
+export default List;

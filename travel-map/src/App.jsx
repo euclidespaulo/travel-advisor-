@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {CssBaseline, Grid, Header} from '@material-ui/core';
 
 import Head from "./components/Head";
@@ -7,7 +7,6 @@ import Map from "./components/Map";
 import PlaceDetails from "./components/PlaceDetails";
 
 const App = () => {
-
   return(
     <>
       <CssBaseline />
@@ -19,9 +18,9 @@ const App = () => {
           <Grid item xs ={12} md={8}>
             <Map />
           </Grid>
-      <Grid />
+      </Grid>
     </>
   );
-}
+ }
 
-export default App;
+
