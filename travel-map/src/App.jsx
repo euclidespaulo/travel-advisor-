@@ -1,5 +1,5 @@
 import React from 'react';
-import {CssBaseline, Grid, Header} from '@material-ui/core';
+import {CardHeader, CssBaseline, Grid} from '@mui/material';
 
 import Head from "./components/Head/Head";
 import List from "./components/List/List";
@@ -10,10 +10,11 @@ const App = () => {
   return(
     <>
       <CssBaseline />
-      <Header />
+      <CardHeader />
       <Grid container spacing={3} style={{width: '100%'}} >
           <Grid item xs={12} md={4} >
             <List />
+            <h1></h1>
           </Grid>
           <Grid item xs ={12} md={8}>
             <Map />
