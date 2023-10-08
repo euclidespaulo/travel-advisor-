@@ -1,6 +1,9 @@
 
-export default const Head = () => {
+const Head = () => {
     return (
-        <></>
+        <>
+        </>
     )
 };
+
+export default Head;
