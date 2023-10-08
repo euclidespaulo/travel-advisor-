@@ -1,6 +1,6 @@
 
 export default const PlaceDetails = () => {
-    return(
+    return (
         <>
         </>
     );
