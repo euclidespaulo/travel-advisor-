@@ -6,7 +6,8 @@ const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary'
 const getPlacesData = async (sw, ne) => {
 
     try {
-        const {data: {data}} = await axios.get(URL, {
+        const {data: {data}} = await axios.request(URL, {
+            method: 'GET',
             params: {
               bl_latitude: sw.lat,
               tr_latitude: ne.lat,

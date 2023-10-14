@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import {CardHeader, CssBaseline, Grid} from '@mui/material';
+import {CardHeader, CssBaseline, Grid} from '@material-ui/core';
 
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
-import PlaceDetails from "./components/PlaceDetails/PlaceDetails";
 import getPlacesData from './api/index';
 
 const App = () => {
@@ -20,6 +19,8 @@ const App = () => {
   }, []);
 
   useEffect(() => {
+    console.log(coordinates, bounds)
+    
     getPlacesData(bounds.sw, bounds.ne)
       .then((data) => {
         console.log(data);

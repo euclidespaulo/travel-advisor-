@@ -7,7 +7,8 @@ import Rating from '@material-ui/lab/Rating';
 import useStyles from './styles';
 
 
-const PlaceDetails = ({ place }) => {
+export const PlaceDetails = ({ place }) => {
+    console.log(place)
 
     const classes = useStyles();
 
@@ -25,4 +26,3 @@ const PlaceDetails = ({ place }) => {
     );
 }
 
-export default PlaceDetails;
