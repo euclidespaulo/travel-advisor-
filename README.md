@@ -1,7 +1,5 @@
 # Travel Advisor App
 
-![Travel Advisor App Screenshot](screenshot.png)
-
 The Travel Advisor App is a robust and user-friendly Maps Application that harnesses the power of Geolocation, the Google Maps API, and the Google Places API to provide users with an exceptional travel experience. This app offers various features that set it apart as the go-to tool for travelers, explorers, and tourists.
 
 ## Key Features
