@@ -1,19 +1,16 @@
 import React, {useState} from 'react';
-import { CircularProgress, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, FormControl} from '@mui/material';
 import {PlaceDetails} from '../PlaceDetails/PlaceDetails';
 
-import useStyles from "./style";
 const List = ({places}) => {
-    const classes = useStyles();
     const[type, setType] = useState('restaurant');
     const[rating, setRating] = useState('');
 
   
     return(
-        <div className={classes.container}>
+        <div sx={{padding: '25px'}}>
             <Typography variant='h4'>Restaurant, Hotels & Attractions around you</Typography>
-            <FormControl className={classes.FormControl}>
+            <FormControl sx={{ margin: spacing(1), minWidth: 120, marginBottom: '30px'}}>
                 <InputLabel>Type</InputLabel>
                 <Select value={type} onChange={e => setType(e.target.value)}>
                     <MenuItem value="restaurants"> Restaurants</MenuItem>
@@ -21,7 +18,7 @@ const List = ({places}) => {
                     <MenuItem value="attraction">Attraction</MenuItem>
                 </Select>      
             </FormControl>
-            <FormControl className={classes.FormControl}>
+            <FormControl sx={{ margin: spacing(1), minWidth: 120, marginBottom: '30px'}}>
                 <InputLabel>Rating</InputLabel>
                 <Select value={rating} onChange={e => setRating(e.target.value)}>
                     <MenuItem value={0}>All</MenuItem>
@@ -30,7 +27,7 @@ const List = ({places}) => {
                     <MenuItem value={4.5}>Above 4.5</MenuItem>
                 </Select>    
             </FormControl>
-            <Grid container spacing={3} className={classes.list}>
+            <Grid container spacing={3} sx={{ height: '75vh', overflow: 'auto',}}>
                 {places?.map((place, i) => (
                     <Grid item key={i} xs={12}>
                         <PlaceDetails place={place}/>
